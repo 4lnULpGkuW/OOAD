@@ -25,13 +25,13 @@ public class Member : Person
 
     public void makeVisit(Club club)
     {
-        Visit visit = new Visit();
+        Visit visit = new Visit(this);
         visitHistory.Add(visit);
     }
 
     public void orderService(Service service)
     {
-        visitHistory.Last().createAOS(this, service);
+        visitHistory.Last().createAOS(service);
     }
 }
 
@@ -59,10 +59,11 @@ public class Visit
 {
     public List<ActOfService> orderHistory { get; set; }
     public string date { get; set; }
-
-    public void createAOS(Member member, Service service)
+    public Member member { get; set; }
+    public Visit(Member member) {}
+    public void createAOS(Service service)
     {
-        aos = new ActOfService(member, service);
+        aos = new ActOfService(this, service);
         orderHistory.Add(aos);
     }
 }
@@ -71,29 +72,31 @@ public class ActOfService
 {
     public string datetime { get; set; }
     public int price { get; set; }
+    public Visit visit { get; set; }
     public Staff staff { get; set; }
     public Service service { get; set; }
 
-    public ActOfService(Member member, Service service)
+    public ActOfService(Visit visit, Service service)
     {
         datetime = DateTime.Now;
+        this.visit = visit;
         this.service = service;
-        if (bonus.discount != 0) 
+        if (visit.member.bonus.discount != 0) 
         {
-            price = service.price * (1 - member.bonus.discount);
+            price = service.price * (1 - visit.member.bonus.discount);
         }
         else 
         {
             price = service.price;
         }
-        assignStaff(member.club);
+        assignStaff();
     }
 
-    private void assignStaff(Club club)
+    private void assignStaff()
     {
-        foreach (Staff staff in club.staffList)
+        foreach (Staff staff in visit.member.club.staffList)
         {
-            if (staff.isFree) 
+            if (staff.isFree)
             {
                 this.staff = staff;
                 staff.provideService(this);
