@@ -71,10 +71,13 @@ public class ActOfService
 {
     public string datetime { get; set; }
     public int price { get; set; }
+    public Staff staff { get; set; }
+    public Service service { get; set; }
 
     public ActOfService(Member member, Service service)
     {
         datetime = DateTime.Now;
+        this.service = service;
         if (bonus.discount != 0) 
         {
             price = service.price * (1 - member.bonus.discount);
@@ -92,6 +95,7 @@ public class ActOfService
         {
             if (staff.isFree) 
             {
+                this.staff = staff;
                 staff.provideService(this);
             }
         }
