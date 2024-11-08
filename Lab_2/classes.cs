@@ -7,12 +7,12 @@ public class Club
     public List<Member> memberList { get; set; }
     public List<Service> serviceList { get; set; }
     public List<Bonus> bonusList { get; set; }
-    public void createService(params String[] args) {
-        Service service = new service(args);
+    public void CreateService(params String[] args) {
+        Service service = new Service(args);
         serviceList.Add(service);
     }
-    public void createBonus(params String[] args) {
-        Service bonus = new bonus(args);
+    public void CreateBonus(params String[] args) {
+        Service bonus = new Bonus(args);
         bonusList.Add(bonus);
     }
 }
@@ -21,35 +21,35 @@ public class Person
 {
     public string name { get; set; }
     public Club club { get; set; }
-    public abstract void joinClub(Club club){}
+    public abstract void JoinClub(Club club){}
 }
 
 public class Member : Person
 {
     public Bonus bonus { get; set; }
     public List<Visit> visitHistory { get; set; }
-    public override void joinClub(Club club) {}
+    public override void JoinClub(Club club) {}
 
-    public void makeVisit(Club club)
+    public void MakeVisit(Club club)
     {
         Visit visit = new Visit(this);
         visitHistory.Add(visit);
     }
 
-    public void orderService(Service service)
+    public void OrderService(Service service)
     {
-        visitHistory.Last().createAOS(service);
+        visitHistory.Last().CreateAOS(service);
     }
 
-    public void assignBonus(Bonus bonus) {}
+    public void AssignBonus(Bonus bonus) {}
 }
 
 public class Staff : Person
 {
     public string position { get; set; }
     public bool isFree { get; set; }
-    public override void joinClub(Club club) {}
-    public void provideService(ActOfService aos) {}
+    public override void JoinClub(Club club) {}
+    public void ProvideService(ActOfService aos) {}
 }
 
 public class Bonus
@@ -72,7 +72,7 @@ public class Visit
     public string date { get; set; }
     public Member member { get; set; }
     public Visit(Member member) {}
-    public void createAOS(Service service)
+    public void CreateAOS(Service service)
     {
         aos = new ActOfService(this, service);
         orderHistory.Add(aos);
@@ -100,17 +100,17 @@ public class ActOfService
         {
             price = service.price;
         }
-        assignStaff();
+        AssignStaff();
     }
 
-    private void assignStaff()
+    private void AssignStaff()
     {
         foreach (Staff staff in visit.member.club.staffList)
         {
             if (staff.isFree)
             {
                 this.staff = staff;
-                staff.provideService(this);
+                staff.ProvideService(this);
             }
         }
     }
