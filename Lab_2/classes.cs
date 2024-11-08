@@ -33,6 +33,8 @@ public class Member : Person
     {
         visitHistory.Last().createAOS(service);
     }
+
+    public void assignBonus(Bonus bonus) {}
 }
 
 public class Staff : Person
