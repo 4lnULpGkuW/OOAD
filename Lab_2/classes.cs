@@ -5,8 +5,8 @@ public class Club
 {
     public string name { get; set; }    
     public List<Member> memberList { get; set; }
-    public List<Staff> serviceList { get; set; }
-    public List<Staff> bonusList { get; set; }
+    public List<Service> serviceList { get; set; }
+    public List<Bonus> bonusList { get; set; }
     public void createService(params object[] args) {
         Service service = new service(args []);
         serviceList.Add(service);
