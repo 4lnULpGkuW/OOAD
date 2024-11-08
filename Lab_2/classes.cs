@@ -40,8 +40,6 @@ public class Member : Person
     {
         visitHistory.Last().CreateAOS(service);
     }
-
-    public void AssignBonus(Bonus bonus) {}
 }
 
 public class Staff : Person
@@ -50,6 +48,12 @@ public class Staff : Person
     public bool isFree { get; set; }
     public override void JoinClub(Club club) {}
     public void ProvideService(ActOfService aos) {}
+}
+
+public class Administrator : Person
+{
+    public override void JoinClub(Club club) {}
+    public void AssignBonus(Member member, Bonus bonus) {}
 }
 
 public class Bonus
