@@ -85,7 +85,7 @@
         <mxCell id="GPboHP2lbTyr-8-YOAkZ-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="GPboHP2lbTyr-8-YOAkZ-22" vertex="1">
           <mxGeometry y="78" width="210" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="i7V-vdGSqdcXj_ipHPfb-1" value="+ position: String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="GPboHP2lbTyr-8-YOAkZ-22" vertex="1">
+        <mxCell id="i7V-vdGSqdcXj_ipHPfb-1" value="+ joinClub(club: Club&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="GPboHP2lbTyr-8-YOAkZ-22" vertex="1">
           <mxGeometry y="86" width="210" height="26" as="geometry" />
         </mxCell>
         <mxCell id="ENwma4647ypsgETE-1rp-1" value="+ provideService(aos: ActOfService&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="GPboHP2lbTyr-8-YOAkZ-22" vertex="1">
