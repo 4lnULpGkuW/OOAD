@@ -96,13 +96,10 @@ public class ActOfService
         datetime = DateTime.Now;
         this.visit = visit;
         this.service = service;
+        this.price = service.price;
         if (visit.member.bonus.discount != 0) 
         {
             price = service.price * (1 - visit.member.bonus.discount);
-        }
-        else 
-        {
-            price = service.price;
         }
         AssignStaff();
     }
