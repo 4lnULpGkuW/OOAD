@@ -5,9 +5,16 @@ public class Club
 {
     public string name { get; set; }    
     public List<Member> memberList { get; set; }
-    public List<Staff> staffList { get; set; }
-    public void createService(params object[] args) {}
-    public void createBonus(params object[] args) {}
+    public List<Staff> serviceList { get; set; }
+    public List<Staff> bonusList { get; set; }
+    public void createService(params object[] args) {
+        Service service = new service(args []);
+        serviceList.Add(service);
+    }
+    public void createBonus(params object[] args) {
+        Service bonus = new bonus(args []);
+        bonusList.Add(bonus);
+    }
 }
 
 public class Person
