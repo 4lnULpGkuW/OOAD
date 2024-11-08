@@ -45,12 +45,14 @@ public class Staff : Person
 
 public class Bonus
 {
+    public Bonus(args []) {}
     public string name { get; set; }
     public int discount { get; set; }
 }
 
 public class Service
 {
+    public Service(args []) {}
     public string name { get; set; }
     public int price { get; set; }
 }
