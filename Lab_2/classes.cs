@@ -7,12 +7,12 @@ public class Club
     public List<Member> memberList { get; set; }
     public List<Service> serviceList { get; set; }
     public List<Bonus> bonusList { get; set; }
-    public void createService(params object[] args) {
-        Service service = new service(args []);
+    public void createService(params String[] args) {
+        Service service = new service(args);
         serviceList.Add(service);
     }
-    public void createBonus(params object[] args) {
-        Service bonus = new bonus(args []);
+    public void createBonus(params String[] args) {
+        Service bonus = new bonus(args);
         bonusList.Add(bonus);
     }
 }
@@ -54,14 +54,14 @@ public class Staff : Person
 
 public class Bonus
 {
-    public Bonus(String args[]) {}
+    public Bonus(String[] args) {}
     public string name { get; set; }
     public int discount { get; set; }
 }
 
 public class Service
 {
-    public Service(String args[]) {}
+    public Service(String[] args) {}
     public string name { get; set; }
     public int price { get; set; }
 }
