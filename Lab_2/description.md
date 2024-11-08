@@ -13,6 +13,7 @@
 - `+ joinClub(club: Club)` – операция вступления в клуб.
 - `+ makeVisit(club: Club)` – операция, позволяющая создать посещение клуба.
 - `+ orderService(service: Service)` – операция заказа услуги в клубе.
+- `+ assignBonus(Bonus bonus)` - операция назначения услуги.
 
 ### Класс `Staff` – описывает персонал клуба:
 - `+ position: String` – должность сотрудника.
