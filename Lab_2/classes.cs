@@ -28,7 +28,10 @@ public class Member : Person
 {
     public Bonus bonus { get; set; }
     public List<Visit> visitHistory { get; set; }
-    public override void JoinClub(Club club) {}
+    public override void JoinClub(Club club) {
+        this.club = club;
+        club.memberList.Add(club);
+    }
 
     public void MakeVisit(Club club)
     {
@@ -46,13 +49,18 @@ public class Staff : Person
 {
     public string position { get; set; }
     public bool isFree { get; set; }
-    public override void JoinClub(Club club) {}
+    public override void JoinClub(Club club) {
+        this.club = club;
+        club.staffList.Add(club);
+    }
     public void ProvideService(ActOfService aos) {}
 }
 
 public class Administrator : Person
 {
-    public override void JoinClub(Club club) {}
+    public override void JoinClub(Club club) {
+        this.club = club;
+    }
     public void AssignBonus(Member member, Bonus bonus) {}
 }
 
