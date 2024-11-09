@@ -337,7 +337,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="Nn5P1-VjUoj86el8aoE7-1" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;sd Member.orderService(service: Service)&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=251;height=20;" parent="1" vertex="1">
+        <mxCell id="Nn5P1-VjUoj86el8aoE7-1" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;sd Member.OrderService(service: Service)&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=251;height=20;" parent="1" vertex="1">
           <mxGeometry x="59" y="60" width="710" height="580" as="geometry" />
         </mxCell>
         <mxCell id="zBqI4GERUc76_MchgBii-1" value="m:Member" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
@@ -461,7 +461,7 @@
             <mxPoint x="367.43" y="576" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="d_UsGCD6Z9H_3SM3KAdA-2" value="sd созданиеУслуги" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=161;height=20;" parent="1" vertex="1">
+        <mxCell id="d_UsGCD6Z9H_3SM3KAdA-2" value="sd CозданиеУслуги" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=161;height=20;" parent="1" vertex="1">
           <mxGeometry x="59" y="680" width="711" height="340" as="geometry" />
         </mxCell>
         <mxCell id="d_UsGCD6Z9H_3SM3KAdA-11" value="c:Club" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
@@ -510,7 +510,7 @@
             <mxPoint x="95" y="970" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QkGJuYUU9Eaw29t537wm-9" value="sd созданиеБонуса" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=161;height=20;" parent="1" vertex="1">
+        <mxCell id="QkGJuYUU9Eaw29t537wm-9" value="sd CозданиеБонуса" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=161;height=20;" parent="1" vertex="1">
           <mxGeometry x="59" y="1070" width="711" height="340" as="geometry" />
         </mxCell>
         <mxCell id="QkGJuYUU9Eaw29t537wm-13" value="c:Club" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
