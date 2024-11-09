@@ -5,6 +5,7 @@ public class Club
 {
     public string name { get; set; }    
     public List<Member> memberList { get; set; }
+    public List<Member> staffList { get; set; }
     public List<Service> serviceList { get; set; }
     public List<Bonus> bonusList { get; set; }
     public void CreateService(params String[] args) {
@@ -119,7 +120,7 @@ public class ActOfService
         this.visit = visit;
         this.service = service;
         this.price = service.price;
-        if (visit.member.bonus.discount != 0) 
+        if (visit.member.bonus) 
         {
             price = service.price * (1 - visit.member.bonus.discount);
         }
@@ -134,6 +135,7 @@ public class ActOfService
             {
                 this.staff = staff;
                 staff.ProvideService(this);
+                break;
             }
         }
     }
