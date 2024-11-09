@@ -62,6 +62,20 @@ public class Administrator : Person
         this.club = club;
     }
     public void AssignBonus(Member member, Bonus bonus) {}
+    public void Administrate(String[] args) 
+    {
+        // ...
+        if (args) 
+        {
+            club.CreateService(args);
+        }
+        // ...
+        if (args) 
+        {
+            club.CreateBonus(args);
+        }
+        // ...
+    }
 }
 
 public class Bonus
