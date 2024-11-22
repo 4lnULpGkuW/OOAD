@@ -39,7 +39,8 @@
 - Взаимодействие между **Scheduler** и **OrderProcessing** осуществляется по интерфейсу **IOrderInner**, который используется только для внутреннего взаиможействия.
 - **VisitProcessing** вызывает **OrderProcessing**, который в свою очередь вызывает **BillingSystem** .
 
-Также основной компонент **ClubSystem** задействует компонент с данными **DataManagment**, который используется компонентом **AnalyticsService**, чтобы предоставить интерфейс **IStatistics**.
+Также основной компонент **ClubSystem** задействует через интерфейс  **IStatistics** компонент **AnalyticsService**, который в свою очередь использует компонент с данными **DataManagment**.
+
 ### Диаграмма развёртывания
 
 Модули обеспечивающие посещения (**VisitProcessing**), заказы (**OrderProcessing**), предзаказы (**Scheduler**) и биллинг (**BillingSystem**) расположены на одном сервере. Его задействует сервер аналитики (**AnalyticsService**). Система биллинга (**BillingSystem**) задействует внешнюю систему оплаты (**ExternalPaymentProvider**).
